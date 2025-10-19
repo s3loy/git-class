@@ -960,47 +960,6 @@ transition: fade
 </div>
 
 ---
-transition: slide-right
----
-
-# 实战：完整的分支工作流
-
-<div class="grid grid-cols-2 gap-6 mt-4">
-
-  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md">
-      <h2 class="text-xl font-bold mb-4">阶段 1: 创建并开发</h2>
-      <div class="bg-blue-50 border border-blue-300 text-gray-800 p-4 rounded-lg font-mono text-xs space-y-2">
-        <div><span class="opacity-50"># 更新主分支</span></div>
-        <div>git switch main && git pull</div>
-        <div class="mt-2"><span class="opacity-50"># 创建功能分支</span></div>
-        <div>git switch -c feat/error-handling</div>
-        <div class="mt-2"><span class="opacity-50"># 开发并提交</span></div>
-        <div>git add .</div>
-        <div>git commit -m "feat: 添加错误处理"</div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-5 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl shadow-md">
-      <h2 class="text-xl font-bold mb-4">阶段 2: 合并回主分支</h2>
-      <div class="bg-green-50 border border-green-300 text-gray-800 p-4 rounded-lg font-mono text-xs space-y-2">
-        <div><span class="opacity-50"># 切回主分支并更新</span></div>
-        <div>git switch main && git pull</div>
-        <div class="mt-2"><span class="opacity-50"># 合并功能分支</span></div>
-        <div>git merge feat/error-handling</div>
-        <div class="mt-2"><span class="opacity-50"># 推送到远程</span></div>
-        <div>git push origin main</div>
-        <div class="mt-2"><span class="opacity-50"># 删除本地分支</span></div>
-        <div>git branch -d feat/error-handling</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
----
 transition: slide-left
 ---
 
@@ -1154,77 +1113,6 @@ transition: slide-up
   </div>
 </div>
 
----
-layout: center
----
-
-<div class="text-center">
-  <div class="text-6xl mb-6">👥</div>
-  <h1 class="text-4xl font-bold text-indigo-600 mb-3">第五部分：团队协作最佳实践</h1>
-  <p class="text-xl opacity-60">让团队协作更加顺畅</p>
-</div>
-
----
-transition: side-left
----
-
-# Git 工作流：GitHub Flow
-
-<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
-  <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md mb-4">
-    <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
-      <span class="text-3xl">🔄</span>
-      <span>简单实用的团队协作模式</span>
-    </h2>
-    <div class="bg-blue-50 border border-blue-300 text-gray-800 p-4 rounded-lg font-mono text-sm">
-      <div class="flex items-center gap-2">
-        <span class="font-bold text-green-600">main</span>
-        <span class="opacity-75">(生产环境)</span>
-      </div>
-      <div class="ml-4 mt-2">↓</div>
-      <div class="ml-8 flex items-center gap-2 mt-1">
-        <span class="font-bold text-blue-600">创建 feature 分支</span>
-        <span>→</span>
-        <span class="font-bold text-purple-600">开发</span>
-        <span>→</span>
-      </div>
-      <div class="ml-8 flex items-center gap-2 mt-1">
-        <span class="font-bold text-yellow-600">Pull Request</span>
-        <span>→</span>
-        <span class="font-bold text-orange-600">Code Review</span>
-        <span>→</span>
-        <span class="font-bold text-green-600">合并</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="grid grid-cols-3 gap-4 mt-4">
-  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-4 bg-green-50 rounded-xl shadow-sm">
-      <div class="text-3xl mb-2">🔒</div>
-      <div class="font-bold mb-2">原则 1</div>
-      <div class="text-xs">main 永远可部署<br/><span class="opacity-75">(稳定版本)</span></div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-4 bg-blue-50 rounded-xl shadow-sm">
-      <div class="text-3xl mb-2">🏷️</div>
-      <div class="font-bold mb-2">原则 2</div>
-      <div class="text-xs">描述性分支名<br/><code class="text-xs bg-white px-1 rounded">feature/user-auth</code></div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-4 bg-purple-50 rounded-xl shadow-sm">
-      <div class="text-3xl mb-2">✅</div>
-      <div class="font-bold mb-2">原则 3</div>
-      <div class="text-xs">PR + Code Review<br/><span class="opacity-75">保证质量</span></div>
-    </div>
-  </div>
-
-</div>
 
 ---
 transition: slide-right
@@ -1487,220 +1375,6 @@ transition: fade
 </div>
 
 ---
-transition: slide-left
----
-
-# 什么是 Pull Request (PR)?
-
-<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
-  <div class="p-6 bg-gradient-to-br from-indigo-50 to-purple-100 rounded-xl shadow-md mb-6">
-    <h2 class="text-2xl font-bold mb-3 flex items-center gap-2">
-      <span class="text-4xl">🔄</span>
-      <span>Pull Request 是什么?</span>
-    </h2>
-    <div class="bg-white p-4 rounded-lg text-base">
-      <p class="mb-3">Pull Request (拉取请求) 是一种<span class="font-bold text-indigo-600">让别人审查你的代码</span>并<span class="font-bold text-indigo-600">合并到主分支</span>的机制。</p>
-      <div class="bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
-        <div class="font-bold mb-1">通俗理解 📝</div>
-        <div class="text-sm opacity-90">你在自己的分支上完成了功能开发，想要把代码合并到主分支。但不是直接合并，而是先"<span class="font-bold">请求</span>"项目维护者审查你的代码，觉得 OK 了再合并。</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="grid grid-cols-2 gap-4">
-  <div v-motion :initial="{ x: -30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
-    <div class="p-4 bg-green-50 rounded-xl">
-      <div class="text-2xl mb-2">✅</div>
-      <div class="font-bold mb-1">GitHub 叫 Pull Request</div>
-      <div class="text-xs opacity-75">最常用的叫法</div>
-    </div>
-  </div>
-  <div v-motion :initial="{ x: 30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
-    <div class="p-4 bg-orange-50 rounded-xl">
-      <div class="text-2xl mb-2">🦊</div>
-      <div class="font-bold mb-1">GitLab 叫 Merge Request</div>
-      <div class="text-xs opacity-75">意思一样，只是名字不同</div>
-    </div>
-  </div>
-</div>
-
----
-transition: fade
----
-
-# 为什么要使用 Pull Request?
-
-<div class="grid grid-cols-2 gap-5 mt-4">
-  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-sm">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-3xl">🛡️</span>
-        <span>代码质量保障</span>
-      </h2>
-      <div class="space-y-3 text-sm">
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">👀</span>
-          <div>
-            <div class="font-bold">代码审查 (Code Review)</div>
-            <div class="text-xs opacity-75">多双眼睛看代码，找出 Bug 和问题</div>
-          </div>
-        </div>
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">🤖</span>
-          <div>
-            <div class="font-bold">自动化测试</div>
-            <div class="text-xs opacity-75">CI/CD 自动运行测试，确保代码可用</div>
-          </div>
-        </div>
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">📏</span>
-          <div>
-            <div class="font-bold">代码规范检查</div>
-            <div class="text-xs opacity-75">自动检查代码风格、格式是否统一</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-5 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-sm">
-      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-        <span class="text-3xl">🤝</span>
-        <span>团队协作</span>
-      </h2>
-      <div class="space-y-3 text-sm">
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">💬</span>
-          <div>
-            <div class="font-bold">讨论和交流</div>
-            <div class="text-xs opacity-75">在 PR 里讨论实现方案，分享想法</div>
-          </div>
-        </div>
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">📚</span>
-          <div>
-            <div class="font-bold">知识传播</div>
-            <div class="text-xs opacity-75">新人通过 Review 学习，老手传授经验</div>
-          </div>
-        </div>
-        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
-          <span class="text-2xl">📝</span>
-          <div>
-            <div class="font-bold">留下记录</div>
-            <div class="text-xs opacity-75">为什么这么改？讨论过程都有记录</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 1000 } }" class="mt-5 p-4 bg-green-50 rounded-xl border-l-4 border-green-400 flex items-start gap-3">
-  <span class="text-3xl">💡</span>
-  <div>
-    <div class="font-bold">核心理念</div>
-    <div class="text-sm opacity-75">PR 不是找茬，而是<span class="font-bold text-green-600">互相帮助</span>，共同提高代码质量！</div>
-  </div>
-</div>
-
----
-transition: slide-up
----
-
-# 如何使用 Pull Request?
-
-<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
-  <div class="p-3 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-sm mb-3">
-    <h2 class="text-lg font-bold mb-2 flex items-center gap-2">
-      <span class="text-2xl">🚀</span>
-      <span>完整流程</span>
-    </h2>
-    <div class="flex items-center justify-center gap-1 text-xs">
-      <div class="p-2 bg-white rounded text-center">
-        <div class="text-lg mb-0.5">1️⃣</div>
-        <div class="font-bold text-xs">创建分支</div>
-      </div>
-      <div class="text-lg">→</div>
-      <div class="p-2 bg-white rounded text-center">
-        <div class="text-lg mb-0.5">2️⃣</div>
-        <div class="font-bold text-xs">开发提交</div>
-      </div>
-      <div class="text-lg">→</div>
-      <div class="p-2 bg-white rounded text-center">
-        <div class="text-lg mb-0.5">3️⃣</div>
-        <div class="font-bold text-xs">推送远程</div>
-      </div>
-      <div class="text-lg">→</div>
-      <div class="p-2 bg-purple-100 rounded text-center">
-        <div class="text-lg mb-0.5">4️⃣</div>
-        <div class="font-bold text-xs">创建 PR</div>
-      </div>
-      <div class="text-lg">→</div>
-      <div class="p-2 bg-white rounded text-center">
-        <div class="text-lg mb-0.5">5️⃣</div>
-        <div class="font-bold text-xs">代码审查</div>
-      </div>
-      <div class="text-lg">→</div>
-      <div class="p-2 bg-green-100 rounded text-center">
-        <div class="text-lg mb-0.5">6️⃣</div>
-        <div class="font-bold text-xs">合并代码</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="grid grid-cols-2 gap-3">
-  <div v-motion :initial="{ x: -30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
-    <div class="p-3 bg-yellow-50 rounded-xl">
-      <h3 class="font-bold mb-2 flex items-center gap-2 text-sm">
-        <span class="text-lg">📌</span>
-        <span>创建 PR 的步骤</span>
-      </h3>
-      <div class="space-y-1 text-xs">
-        <div class="bg-white p-1.5 rounded">1. 在 GitHub 点击 "New pull request"</div>
-        <div class="bg-white p-1.5 rounded">2. 选择源分支 → 目标分支</div>
-        <div class="bg-white p-1.5 rounded">3. 填写标题和描述</div>
-        <div class="bg-white p-1.5 rounded">4. 指定审查者 (Reviewers)</div>
-        <div class="bg-white p-1.5 rounded">5. 点击 "Create pull request"</div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ x: 30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
-    <div class="p-3 bg-green-50 rounded-xl">
-      <h3 class="font-bold mb-2 flex items-center gap-2 text-sm">
-        <span class="text-lg">✅</span>
-        <span>好的 PR 应该</span>
-      </h3>
-      <div class="space-y-1 text-xs">
-        <div class="bg-white p-1.5 rounded flex items-center gap-1">
-          <span>✓</span>
-          <span><span class="font-bold">标题清晰</span>：feat: 添加登录功能</span>
-        </div>
-        <div class="bg-white p-1.5 rounded flex items-center gap-1">
-          <span>✓</span>
-          <span><span class="font-bold">描述完整</span>：改了什么、为什么</span>
-        </div>
-        <div class="bg-white p-1.5 rounded flex items-center gap-1">
-          <span>✓</span>
-          <span><span class="font-bold">一次一件事</span>：不混杂多个功能</span>
-        </div>
-        <div class="bg-white p-1.5 rounded flex items-center gap-1">
-          <span>✓</span>
-          <span><span class="font-bold">保持小巧</span>：改动不超过 300 行</span>
-        </div>
-        <div class="bg-white p-1.5 rounded flex items-center gap-1">
-          <span>✓</span>
-          <span><span class="font-bold">CI 通过</span>：确保测试都过了</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
----
 transition: side-up
 ---
 
@@ -1779,63 +1453,6 @@ transition: side-up
   </div>
 </div>
 
----
-transition: slide-up
----
-
-# 进阶命令速查
-
-<div class="grid grid-cols-2 gap-4 mt-3">
-
-  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-3 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-sm">
-      <div class="font-bold mb-2 text-sm">查看文件历史</div>
-      <div class="bg-blue-50 border border-blue-300 text-gray-800 p-2 rounded font-mono text-xs">
-        <div class="text-gray-600 text-xs"># 查看某文件的修改历史</div>
-        <div>git log <span class="text-blue-600">main.rs</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-3 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-sm">
-      <div class="font-bold mb-2 text-sm">查找代码作者</div>
-      <div class="bg-purple-50 border border-purple-300 text-gray-800 p-2 rounded font-mono text-xs">
-        <div class="text-gray-600 text-xs"># 查看每行代码是谁写的</div>
-        <div>git blame <span class="text-purple-600">main.rs</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: 50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-3 bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-sm">
-      <div class="font-bold mb-2 text-sm">找回消失的提交</div>
-      <div class="bg-orange-50 border border-orange-300 text-gray-800 p-2 rounded font-mono text-xs">
-        <div class="text-gray-600 text-xs"># Git 的后悔药</div>
-        <div>git reflog</div>
-      </div>
-    </div>
-  </div>
-
-  <div v-motion :initial="{ y: 50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
-    <div class="p-3 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl shadow-sm">
-      <div class="font-bold mb-2 text-sm">临时保存修改</div>
-      <div class="bg-green-50 border border-green-300 text-gray-800 p-2 rounded font-mono text-xs">
-        <div class="text-gray-600 text-xs"># 暂时保存当前修改</div>
-        <div>git stash</div>
-        <div class="text-gray-600 text-xs mt-1"># 恢复保存的修改</div>
-        <div>git stash pop</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }" class="mt-4 p-3 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
-  <div class="text-sm">
-    <span class="font-bold">提示：</span>这些是<span class="font-bold text-yellow-600">进阶命令</span>，新手暂时不用急着掌握
-  </div>
-</div>
 
 ---
 transition: fade
@@ -2160,6 +1777,324 @@ layout: center
 </div>
 
 ---
+transition: slide-right
+---
+
+# 实战：完整的分支工作流
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+
+  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md">
+      <h2 class="text-xl font-bold mb-4">阶段 1: 创建并开发</h2>
+      <div class="bg-blue-50 border border-blue-300 text-gray-800 p-4 rounded-lg font-mono text-xs space-y-2">
+        <div><span class="opacity-50"># 更新主分支</span></div>
+        <div>git switch main && git pull</div>
+        <div class="mt-2"><span class="opacity-50"># 创建功能分支</span></div>
+        <div>git switch -c feat/error-handling</div>
+        <div class="mt-2"><span class="opacity-50"># 开发并提交</span></div>
+        <div>git add .</div>
+        <div>git commit -m "feat: 添加错误处理"</div>
+      </div>
+    </div>
+  </div>
+
+  <div v-motion :initial="{ y: -50, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-5 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl shadow-md">
+      <h2 class="text-xl font-bold mb-4">阶段 2: 合并回主分支</h2>
+      <div class="bg-green-50 border border-green-300 text-gray-800 p-4 rounded-lg font-mono text-xs space-y-2">
+        <div><span class="opacity-50"># 切回主分支并更新</span></div>
+        <div>git switch main && git pull</div>
+        <div class="mt-2"><span class="opacity-50"># 合并功能分支</span></div>
+        <div>git merge feat/error-handling</div>
+        <div class="mt-2"><span class="opacity-50"># 推送到远程</span></div>
+        <div>git push origin main</div>
+        <div class="mt-2"><span class="opacity-50"># 删除本地分支</span></div>
+        <div>git branch -d feat/error-handling</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+---
+transition: side-left
+---
+
+# Git 工作流：GitHub Flow
+
+<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
+  <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md mb-4">
+    <h2 class="text-xl font-bold mb-3 flex items-center gap-2">
+      <span class="text-3xl">🔄</span>
+      <span>简单实用的团队协作模式</span>
+    </h2>
+    <div class="bg-blue-50 border border-blue-300 text-gray-800 p-4 rounded-lg font-mono text-sm">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-green-600">main</span>
+        <span class="opacity-75">(生产环境)</span>
+      </div>
+      <div class="ml-4 mt-2">↓</div>
+      <div class="ml-8 flex items-center gap-2 mt-1">
+        <span class="font-bold text-blue-600">创建 feature 分支</span>
+        <span>→</span>
+        <span class="font-bold text-purple-600">开发</span>
+        <span>→</span>
+      </div>
+      <div class="ml-8 flex items-center gap-2 mt-1">
+        <span class="font-bold text-yellow-600">Pull Request</span>
+        <span>→</span>
+        <span class="font-bold text-orange-600">Code Review</span>
+        <span>→</span>
+        <span class="font-bold text-green-600">合并</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-3 gap-4 mt-4">
+  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-4 bg-green-50 rounded-xl shadow-sm">
+      <div class="text-3xl mb-2">🔒</div>
+      <div class="font-bold mb-2">原则 1</div>
+      <div class="text-xs">main 永远可部署<br/><span class="opacity-75">(稳定版本)</span></div>
+    </div>
+  </div>
+
+  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-4 bg-blue-50 rounded-xl shadow-sm">
+      <div class="text-3xl mb-2">🏷️</div>
+      <div class="font-bold mb-2">原则 2</div>
+      <div class="text-xs">描述性分支名<br/><code class="text-xs bg-white px-1 rounded">feature/user-auth</code></div>
+    </div>
+  </div>
+
+  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-4 bg-purple-50 rounded-xl shadow-sm">
+      <div class="text-3xl mb-2">✅</div>
+      <div class="font-bold mb-2">原则 3</div>
+      <div class="text-xs">PR + Code Review<br/><span class="opacity-75">保证质量</span></div>
+    </div>
+  </div>
+
+</div>
+
+
+---
+transition: slide-left
+---
+
+# 什么是 Pull Request (PR)?
+
+<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
+  <div class="p-6 bg-gradient-to-br from-indigo-50 to-purple-100 rounded-xl shadow-md mb-6">
+    <h2 class="text-2xl font-bold mb-3 flex items-center gap-2">
+      <span class="text-4xl">🔄</span>
+      <span>Pull Request 是什么?</span>
+    </h2>
+    <div class="bg-white p-4 rounded-lg text-base">
+      <p class="mb-3">Pull Request (拉取请求) 是一种<span class="font-bold text-indigo-600">让别人审查你的代码</span>并<span class="font-bold text-indigo-600">合并到主分支</span>的机制。</p>
+      <div class="bg-blue-50 border-l-4 border-blue-400 p-3 rounded">
+        <div class="font-bold mb-1">通俗理解 📝</div>
+        <div class="text-sm opacity-90">你在自己的分支上完成了功能开发，想要把代码合并到主分支。但不是直接合并，而是先"<span class="font-bold">请求</span>"项目维护者审查你的代码，觉得 OK 了再合并。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+  <div v-motion :initial="{ x: -30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
+    <div class="p-4 bg-green-50 rounded-xl">
+      <div class="text-2xl mb-2">✅</div>
+      <div class="font-bold mb-1">GitHub 叫 Pull Request</div>
+      <div class="text-xs opacity-75">最常用的叫法</div>
+    </div>
+  </div>
+  <div v-motion :initial="{ x: 30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
+    <div class="p-4 bg-orange-50 rounded-xl">
+      <div class="text-2xl mb-2">🦊</div>
+      <div class="font-bold mb-1">GitLab 叫 Merge Request</div>
+      <div class="text-xs opacity-75">意思一样，只是名字不同</div>
+    </div>
+  </div>
+</div>
+
+---
+transition: fade
+---
+
+# 为什么要使用 Pull Request?
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-5 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-sm">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span class="text-3xl">🛡️</span>
+        <span>代码质量保障</span>
+      </h2>
+      <div class="space-y-3 text-sm">
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">👀</span>
+          <div>
+            <div class="font-bold">代码审查 (Code Review)</div>
+            <div class="text-xs opacity-75">多双眼睛看代码，找出 Bug 和问题</div>
+          </div>
+        </div>
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">🤖</span>
+          <div>
+            <div class="font-bold">自动化测试</div>
+            <div class="text-xs opacity-75">CI/CD 自动运行测试，确保代码可用</div>
+          </div>
+        </div>
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">📏</span>
+          <div>
+            <div class="font-bold">代码规范检查</div>
+            <div class="text-xs opacity-75">自动检查代码风格、格式是否统一</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 800 } }">
+    <div class="p-5 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl shadow-sm">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span class="text-3xl">🤝</span>
+        <span>团队协作</span>
+      </h2>
+      <div class="space-y-3 text-sm">
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">💬</span>
+          <div>
+            <div class="font-bold">讨论和交流</div>
+            <div class="text-xs opacity-75">在 PR 里讨论实现方案，分享想法</div>
+          </div>
+        </div>
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">📚</span>
+          <div>
+            <div class="font-bold">知识传播</div>
+            <div class="text-xs opacity-75">新人通过 Review 学习，老手传授经验</div>
+          </div>
+        </div>
+        <div class="p-3 bg-white rounded-lg flex items-start gap-3">
+          <span class="text-2xl">📝</span>
+          <div>
+            <div class="font-bold">留下记录</div>
+            <div class="text-xs opacity-75">为什么这么改？讨论过程都有记录</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div v-motion :initial="{ y: 30, opacity: 0 }" :enter="{ y: 0, opacity: 1, transition: { delay: 1000 } }" class="mt-5 p-4 bg-green-50 rounded-xl border-l-4 border-green-400 flex items-start gap-3">
+  <span class="text-3xl">💡</span>
+  <div>
+    <div class="font-bold">核心理念</div>
+    <div class="text-sm opacity-75">PR 不是找茬，而是<span class="font-bold text-green-600">互相帮助</span>，共同提高代码质量！</div>
+  </div>
+</div>
+
+---
+transition: slide-up
+---
+
+# 如何使用 Pull Request?
+
+<div v-motion :initial="{ scale: 0.95, opacity: 0 }" :enter="{ scale: 1, opacity: 1, transition: { delay: 800 } }">
+  <div class="p-3 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-sm mb-3">
+    <h2 class="text-lg font-bold mb-2 flex items-center gap-2">
+      <span class="text-2xl">🚀</span>
+      <span>完整流程</span>
+    </h2>
+    <div class="flex items-center justify-center gap-1 text-xs">
+      <div class="p-2 bg-white rounded text-center">
+        <div class="text-lg mb-0.5">1️⃣</div>
+        <div class="font-bold text-xs">创建分支</div>
+      </div>
+      <div class="text-lg">→</div>
+      <div class="p-2 bg-white rounded text-center">
+        <div class="text-lg mb-0.5">2️⃣</div>
+        <div class="font-bold text-xs">开发提交</div>
+      </div>
+      <div class="text-lg">→</div>
+      <div class="p-2 bg-white rounded text-center">
+        <div class="text-lg mb-0.5">3️⃣</div>
+        <div class="font-bold text-xs">推送远程</div>
+      </div>
+      <div class="text-lg">→</div>
+      <div class="p-2 bg-purple-100 rounded text-center">
+        <div class="text-lg mb-0.5">4️⃣</div>
+        <div class="font-bold text-xs">创建 PR</div>
+      </div>
+      <div class="text-lg">→</div>
+      <div class="p-2 bg-white rounded text-center">
+        <div class="text-lg mb-0.5">5️⃣</div>
+        <div class="font-bold text-xs">代码审查</div>
+      </div>
+      <div class="text-lg">→</div>
+      <div class="p-2 bg-green-100 rounded text-center">
+        <div class="text-lg mb-0.5">6️⃣</div>
+        <div class="font-bold text-xs">合并代码</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 gap-3">
+  <div v-motion :initial="{ x: -30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
+    <div class="p-3 bg-yellow-50 rounded-xl">
+      <h3 class="font-bold mb-2 flex items-center gap-2 text-sm">
+        <span class="text-lg">📌</span>
+        <span>创建 PR 的步骤</span>
+      </h3>
+      <div class="space-y-1 text-xs">
+        <div class="bg-white p-1.5 rounded">1. 在 GitHub 点击 "New pull request"</div>
+        <div class="bg-white p-1.5 rounded">2. 选择源分支 → 目标分支</div>
+        <div class="bg-white p-1.5 rounded">3. 填写标题和描述</div>
+        <div class="bg-white p-1.5 rounded">4. 指定审查者 (Reviewers)</div>
+        <div class="bg-white p-1.5 rounded">5. 点击 "Create pull request"</div>
+      </div>
+    </div>
+  </div>
+
+  <div v-motion :initial="{ x: 30, opacity: 0 }" :enter="{ x: 0, opacity: 1, transition: { delay: 1000 } }">
+    <div class="p-3 bg-green-50 rounded-xl">
+      <h3 class="font-bold mb-2 flex items-center gap-2 text-sm">
+        <span class="text-lg">✅</span>
+        <span>好的 PR 应该</span>
+      </h3>
+      <div class="space-y-1 text-xs">
+        <div class="bg-white p-1.5 rounded flex items-center gap-1">
+          <span>✓</span>
+          <span><span class="font-bold">标题清晰</span>：feat: 添加登录功能</span>
+        </div>
+        <div class="bg-white p-1.5 rounded flex items-center gap-1">
+          <span>✓</span>
+          <span><span class="font-bold">描述完整</span>：改了什么、为什么</span>
+        </div>
+        <div class="bg-white p-1.5 rounded flex items-center gap-1">
+          <span>✓</span>
+          <span><span class="font-bold">一次一件事</span>：不混杂多个功能</span>
+        </div>
+        <div class="bg-white p-1.5 rounded flex items-center gap-1">
+          <span>✓</span>
+          <span><span class="font-bold">保持小巧</span>：改动不超过 300 行</span>
+        </div>
+        <div class="bg-white p-1.5 rounded flex items-center gap-1">
+          <span>✓</span>
+          <span><span class="font-bold">CI 通过</span>：确保测试都过了</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
 transition: fade
 ---
 
@@ -2412,7 +2347,7 @@ transition: fade-out
         <div class="p-3 bg-white rounded-lg flex items-start gap-3">
           <div>
             <div class="font-bold">看文档</div>
-            <div class="text-xs opacity-75">遇到问题先 Google</div>
+            <div class="text-xs opacity-75">遇到问题先搜索</div>
           </div>
         </div>
       </div>
